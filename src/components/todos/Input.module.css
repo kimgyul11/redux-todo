@@ -1,0 +1,9 @@
+.inputWrap {
+  display: flex;
+  align-items: center;
+  background-color: darkcyan;
+  height: 80px;
+}
+
+.input {
+}
