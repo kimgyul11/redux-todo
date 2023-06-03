@@ -11,7 +11,12 @@ export default function Todo({ todo }) {
   };
 
   const onStateHandler = () => {
-    dispatch(todoActions.updateTodo({ id, title, state: "complated" }));
+    if (state === "active") {
+      dispatch(todoActions.updateTodo({ id, title, state: "complated" }));
+    }
+    if (state === "complated") {
+      dispatch(todoActions.updateTodo({ id, title, state: "active" }));
+    }
   };
 
   return (
